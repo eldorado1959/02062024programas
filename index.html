@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Opções</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Menu de Opções</h1>
+        <ul id="menu">
+            <li><button onclick="showSection('entrada')">Entrada</button></li>
+            <li><button onclick="showSection('consulta')">Consulta</button></li>
+            <li><button onclick="showSection('lista')">Lista de Itens</button></li>
+            <li><button onclick="showSection('fim')">Fim</button></li>
+        </ul>
+        
+        <div id="sections">
+            <section id="entrada" class="hidden">
+                <h2>Entrada</h2>
+                <form id="entryForm">
+                    <label for="item">Item:</label>
+                    <input type="text" id="item" name="item" required>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </section>
+            
+            <section id="consulta" class="hidden">
+                <h2>Consulta</h2>
+                <p>Consulta de itens.</p>
+            </section>
+            
+            <section id="lista" class="hidden">
+                <h2>Lista de Itens</h2>
+                <ul id="itemList"></ul>
+            </section>
+            
+            <section id="fim" class="hidden">
+                <h2>Fim</h2>
+                <p>Obrigado por utilizar nosso sistema!</p>
+            </section>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
